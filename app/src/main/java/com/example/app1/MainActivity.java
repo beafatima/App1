@@ -37,42 +37,10 @@ public abstract class MainActivity extends AppCompatActivity implements Navigati
                 R.string.close_nav);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
-
-        /*if (savedInstanceState == null) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_layout, new GameplayFragment()).commit();
-            navigationView.setCheckedItem(R.id.gameplay);
-        }*/
     }
 
     protected abstract void setSupportActionBar(Toolbar toolbar);
 
-/*
-    @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        int id = item.getItemId();
-
-        if (id == R.id.gameplay) {
-            Toast.makeText(MainActivity.this, "Gameplay Selected", Toast.LENGTH_SHORT).show();
-        } else if (id == R.id.archive) {
-            Toast.makeText(MainActivity.this, "Gameplay Selected", Toast.LENGTH_SHORT).show();
-        } else if (id == R.id.history) {
-            Toast.makeText(MainActivity.this, "Gameplay Selected", Toast.LENGTH_SHORT).show();
-        } else if (id == R.id.profile) {
-            Toast.makeText(MainActivity.this, "Gameplay Selected", Toast.LENGTH_SHORT).show();
-        } else if (id == R.id.faqs) {
-            Toast.makeText(MainActivity.this, "Gameplay Selected", Toast.LENGTH_SHORT).show();
-        } else if (id == R.id.feedback) {
-            Toast.makeText(MainActivity.this, "Gameplay Selected", Toast.LENGTH_SHORT).show();
-        } else if (id == R.id.logout) {
-            Toast.makeText(MainActivity.this, "Logout Selected", Toast.LENGTH_SHORT).show();
-        }
-
-        drawerLayout.closeDrawer(GravityCompat.START);
-        return true;
-    }*/
-    /*
-    BottomNavigationView navigationBar = findViewById(R.id.navigation_bar);
-navigationBar.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() { */
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -100,21 +68,6 @@ navigationBar.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNav
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
     }
-            /*Intent intent;
-            switch (item.getItemId()) {
-                case R.id.gameplay:
-                    intent = new Intent(MainActivity.this, GameplayActivity.class);
-                    break;
-                case R.id.archive:
-                    intent = new Intent(MainActivity.this, ArchiveActivity.class);
-                    break;
-                case R.id.history:
-                    intent = new Intent(MainActivity.this, MatchActivity.class);
-                    break;
-                default:
-                    return false; */
-
-
 
     @Override
     public void onBackPressed() {
@@ -124,8 +77,6 @@ navigationBar.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNav
             super.onBackPressed();
         }
     }
-
-
 }
 
 
